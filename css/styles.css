@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --darkblue: hsl(238, 29%, 16%);
+  --Softred: hsl(14, 88%, 65%);
+  --Softviolet: hsl(273, 75%, 66%);
+  --Softblue: hsl(240, 73%, 65%);
+  --Veryblue: hsl(237, 12%, 33%);
+  --Darkgrayishblue: hsl(240, 6%, 50%);
+  --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+html {
+  font-size: 62.5%;
+}
+*,*::backdrop,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+.faq {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(var(--Softviolet), var(--Softblue));
+}
+.faq-container {
+  min-height: 500px;
+  min-width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 30px;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: -194% 62%;
+}
+
+.faq-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-image img {
+  width: 100%;
+  height: auto;
+  margin-left: -66px;
+}
+.box {
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%) scale(0.9);
+  z-index: 1;
+  display: none;
+}
+
+.faq-content {
+  width: 50%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+  color: var(--darkblue);
+}
+
+.faq-content .faq-title {
+  align-self: flex-start;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.accordion-item {
+  border-bottom: 1px solid var(--Lightgrayishblue);
+}
+
+.accordion-item .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 7rem;
+  align-items: center;
+  padding: 1.8rem 0;
+}
+
+.accordion-item .header {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+.accordion-header img {
+  width: 1.5rem;
+}
+.accordion-item .accordion-body {
+  font-size: 1.2rem;
+  padding-bottom: 15px;
+  display: none;
+  width: 320px;
+  min-width:200px ;
+  color: var(--Darkgrayishblue);
+
+}
+
+.accordion-item div:hover .header {
+  color: var(--Softred);
+}
+
+.accordion-item div:hover .accordion-header img {
+  transform: rotate(180deg);
+}
+
+.accordion-item div:hover .accordion-body {
+  display: block;
+}
+
+@media screen and (min-width: 1001px) {
+  .box {
+    display: block;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .faq-container {
+    margin-top: 18rem;
+    margin-bottom: 5rem;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    flex-direction: column;
+    background-size: 60%;
+    background-position: left 48% top -7px;
+  }
+
+  .faq-image {
+    width: 55%;
+    overflow: unset;
+    margin-bottom: -65px;
+  }
+
+  .faq-image img {
+    transform: translateY(-59%);
+    margin-left: unset;
+  }
+
+  .faq-content {
+    width: 80%;
+    align-items: unset;
+    padding-bottom: 6rem;
+    gap: 1rem;
+  }
+
+  .faq-content .faq-title {
+    align-self: center;
+    margin-bottom: 3.5rem;
+    font-size: 4rem;
+  }
+
+  .accordion-item div {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq-container {
+    background-size: 70%;
+  }
+
+  .accordion-item .accordion-header {
+    gap: 2rem;
+  }
+
+  .faq-image {
+    width: 65%;
+    overflow: unset;
+  }
+  .accordion-item .accordion-body {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .faq-content {
+    padding: 0;
+  }
+  .accordion-item .accordion-body{
+    width: 200px;
+}
+
+}
