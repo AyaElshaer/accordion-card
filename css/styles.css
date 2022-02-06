@@ -169,7 +169,7 @@ body {
   }
 
   .accordion-item .accordion-header {
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .faq-image {
@@ -187,5 +187,7 @@ body {
   .accordion-item .accordion-body{
     width: 200px;
 }
-
+.accordion-header img {
+    width: 1.2rem;
+  }
 }
