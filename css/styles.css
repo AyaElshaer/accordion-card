@@ -11,12 +11,17 @@
 html {
   font-size: 62.5%;
 }
-*,*::backdrop,*::after {
+*,
+*::backdrop,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+a {
+  text-decoration: none;
+  color: var(--darkblue);
+}
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -90,9 +95,9 @@ body {
 }
 
 .accordion-item .header {
-    font-weight: 400;
-    font-size: 1.4rem;
-  }
+  font-weight: 400;
+  font-size: 1.4rem;
+}
 
 .accordion-header img {
   width: 1.5rem;
@@ -101,21 +106,23 @@ body {
   font-size: 1.2rem;
   padding-bottom: 15px;
   display: none;
-  width: 320px;
-  min-width:200px ;
-  color: var(--Darkgrayishblue);
-
+  width:320px;
+  min-width:200px;
+  color:var(--Darkgrayishblue);
 }
 
-.accordion-item div:hover .header {
+a:hover {
   color: var(--Softred);
 }
-
+a:active {
+  color: var(--darkblue);
+  font-weight: 700;
+}
 .accordion-item div:hover .accordion-header img {
   transform: rotate(180deg);
 }
 
-.accordion-item div:hover .accordion-body {
+.accordion-item .accordion-body:target {
   display: block;
 }
 
@@ -184,10 +191,10 @@ body {
   .faq-content {
     padding: 0;
   }
-  .accordion-item .accordion-body{
+  .accordion-item .accordion-body {
     width: 200px;
-}
-.accordion-header img {
+  }
+  .accordion-header img {
     width: 1.2rem;
   }
 }
