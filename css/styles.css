@@ -197,4 +197,7 @@ a:active {
   .accordion-header img {
     width: 1.2rem;
   }
+  .faq-content {
+    padding-bottom: 7rem;
+  }
 }
