@@ -106,24 +106,26 @@ body {
   font-size: 1.2rem;
   padding-bottom: 15px;
   display: none;
-  width:320px;
-  min-width:200px;
-  color:var(--Darkgrayishblue);
+  width: 320px;
+  min-width: 200px;
+  color: var(--Darkgrayishblue);
 }
 
-a:hover {
+.accordion-item div:hover .header {
   color: var(--Softred);
 }
-a:active {
-  color: var(--darkblue);
-  font-weight: 700;
+
+.accordion-item .accordion-header:target + .accordion-body {
+  display: block;
 }
-.accordion-item div:hover .accordion-header img {
+
+.accordion-item .accordion-header:target .arrow {
   transform: rotate(180deg);
 }
 
-.accordion-item .accordion-body:target {
-  display: block;
+.accordion-item .accordion-header:target > h2 {
+  color: var(--darkblue);
+  font-weight: 700;
 }
 
 @media screen and (min-width: 1001px) {
